@@ -40,19 +40,11 @@ const App = () => {
     <CartProvider>
       <div className="container mx-auto">
         <CartBadge />
-        {/* <div className='flex flex-wrap gap-5 mt-5'>
-          {products.map(product => (
+        <div className="flex flex-wrap gap-5 mt-5">
+          {products.map((product) => (
             <ProductCard key={product.id} item={product} />
           ))}
-        </div> */}
-        <ProductCard
-          item={{
-            id: 1,
-            name: 'Sample Product',
-            image: 'https://placehold.co/150',
-            price: 19.99,
-          }}
-        />
+        </div>
       </div>
     </CartProvider>
   );
