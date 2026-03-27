@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:integration": "vitest --project Integration_Tests",
-    "test:unit": "vitest --project Unit_Tests"
+    "test:unit": "vitest --project Unit_Tests",
+    "test:coverage": "vitest run --coverage",
+    "test:coverage:unit": "vitest run --project Unit_Tests --coverage",
+    "test:coverage:integration": "vitest run --project Integration_Tests --coverage"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -25,6 +28,7 @@
     "@types/node": "^24.0.13",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@vitest/coverage-v8": "3.2.4",
     "@vitejs/plugin-react": "^4.6.0",
     "daisyui": "^5.0.46",
     "eslint": "^9.30.1",

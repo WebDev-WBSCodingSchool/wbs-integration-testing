@@ -17,6 +17,25 @@ export default defineConfig({
   },
   plugins: [react(), tailwindcss()],
   test: {
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'text-summary', 'html', 'json-summary'],
+      reportsDirectory: './coverage',
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: [
+        'src/**/*.test.ts?(x)',
+        'src/**/*.unit.test.ts?(x)',
+        'src/**/*.int.test.ts?(x)',
+        'src/setup*.ts',
+        'src/vite-env.d.ts',
+      ],
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 70,
+        statements: 80,
+      },
+    },
     projects: [
       {
         extends: true,
